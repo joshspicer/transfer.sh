@@ -39,6 +39,6 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifica
 
 USER ${RUNAS}
 
-ENTRYPOINT ["/go/bin/transfersh", "--listener", ":8080"]
+ENTRYPOINT ["/go/bin/transfersh", "--listener", ":8080", "--provider", "azure"]
 
 EXPOSE 8080
